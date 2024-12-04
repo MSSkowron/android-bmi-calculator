@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inputFragment">
+
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.example.mateuszskowronlaboratory2.InputFragment"
+        android:label="Input">
+        <action
+            android:id="@+id/action_input_to_result"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.mateuszskowronlaboratory2.ResultFragment"
+        android:label="Result">
+        <argument
+            android:name="bmi"
+            app:argType="float" />
+        <argument
+            android:name="diagnosis"
+            app:argType="string" />
+    </fragment>
+</navigation>
