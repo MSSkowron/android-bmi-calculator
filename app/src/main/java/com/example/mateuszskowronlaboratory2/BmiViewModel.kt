@@ -11,7 +11,7 @@ class BmiViewModel : ViewModel() {
         val w = weight.value?.toFloatOrNull()
         val h = height.value?.toFloatOrNull()
 
-        if (w == null || h == null || h <= 0) {
+        if (w == null || w <= 0 || h == null || h <= 0) {
             return null
         }
 
